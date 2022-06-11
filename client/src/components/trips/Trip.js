@@ -16,7 +16,7 @@ const Trip = ({ id, name, duration, updateTrip, deleteTrip }) => {
             id={id}
             name={name}
             duration={duration}
-            updateTopic={updateTrip}
+            updateTrip={updateTrip}
             setEdit={setEdit}
           />
           <button onClick={() => setEdit(false)}>Cancel</button>

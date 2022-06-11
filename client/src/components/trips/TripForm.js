@@ -22,7 +22,7 @@ const TripForm = ({ addTrip, id, name, duration, updateTrip, setEdit }) => {
 
   return (
     <>
-      <h1>{ id ? 'Edit' : 'Create '} trip</h1>
+      <h1>{ id ? 'Edit' : 'Create '} Trip</h1>
       <form onSubmit={handleSubmit}>
         <label>Trip:</label>
         <input

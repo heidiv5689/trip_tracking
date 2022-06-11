@@ -45,7 +45,7 @@ const Users = ({}) => {
   return (
     <>
 
-      <h1>Userss</h1>
+      <h1>Users</h1>
       <UserNew addUser={addUser}/>
      
       { users.map( s => (

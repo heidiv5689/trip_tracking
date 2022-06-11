@@ -4,14 +4,14 @@ import TripForm from './TripForm';
 import TripList from './TripList';
 
 const Trips = ({ userId, userEmail }) => {
-  const [trips, setTrip] = useState([])
+  const [trips, setTrips] = useState([])
 
   useEffect( () => {
     // grab all trips from backend
     axios.get(`/api/users/${userId}/trips`)
       .then( res => {
         // store them in our front end
-        setTrip(res.data)
+        setTrips(res.data)
       })
       .catch( err => console.log(err) )
   }, [])
@@ -21,7 +21,7 @@ const Trips = ({ userId, userEmail }) => {
     axios.post(`/api/users/${userId}/trips`, { trip })
       .then( res => {
         // add a trip to our front end
-        setTrip([...trips, res.data])
+        setTrips([...trips, res.data])
       })
       .catch( err => console.log(err) )
   }
@@ -37,14 +37,14 @@ const Trips = ({ userId, userEmail }) => {
           }
           return t
         })
-        setTrip(newUpdatedTrip)
+        setTrips(newUpdatedTrip)
       })
       .catch( err => console.log(err) )
   }
 
   const deleteTrip = (id) => {
     axios.delete(`/api/users/${userId}/trips/${id}`)
-      .then( res => setTrip(trips.filter( t => t.id !== id)))
+      .then( res => setTrips(trips.filter( t => t.id !== id)))
       .catch( err => console.log(err) )
   }
 
