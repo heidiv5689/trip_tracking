@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 
-const UserForm = ({ addUser, id, setEdit, email, password, updateUser }) => {
+const UserForm = ({ addUser, id, setEdit, updateUser, email, password }) => {
   const [user, setUser] = useState({ email: '', password: '' })
 
 

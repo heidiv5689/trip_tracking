@@ -9,6 +9,8 @@ const User = ({id, email, password, updateUser, deleteUser}) => {
       <h1>Hello</h1>
       <h1>user # :{id} Email: {email}</h1>
       <h5>{password}</h5>
+      
+      
       { editing ?
         <>
           <UserForm 

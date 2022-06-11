@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import UserForm from './UserForm';
-import UserList from './UserList'
-
+// import UserForm from './UserForm';
+import User from './User';
+import UserNew from './UserNew';
 
 
 const Users = ({}) => {
@@ -46,12 +46,13 @@ const Users = ({}) => {
     <>
 
       <h1>Userss</h1>
-      <UserForm addUser={addUser} />
-      <UserList 
-        users={users} 
-        updateUser={updateUser}
-        deleteUser={deleteUser}
-      />
+      <UserNew addUser={addUser}/>
+     
+      { users.map( s => (
+       <User key={s.id} {...s} updateUser={updateUser} deleteUser={deleteUser}/>
+      ))
+      }
+      
     </>
   )
 }
