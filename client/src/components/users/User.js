@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import UserForm from './UserForm';
+import Trips from '../trips/Trips';
 
 const User = ({id, email, password, updateUser, deleteUser}) => {
   const [editing, setEdit] = useState(false)
@@ -26,7 +27,7 @@ const User = ({id, email, password, updateUser, deleteUser}) => {
         <>
           <button onClick={() => setEdit(true)}>Edit</button>
           <button onClick={() => deleteUser(id)}>Delete</button>
-          
+          <Trips userId={id} userEmail={email}/>
         </>
       }
 

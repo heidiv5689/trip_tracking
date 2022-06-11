@@ -1,4 +1,5 @@
 class Api::TripsController < ApplicationController
+  
   before_action :set_user 
   before_action :set_trip, only: [:show, :update, :destroy]
 
@@ -38,17 +39,21 @@ class Api::TripsController < ApplicationController
   end
 
   private 
+    
     def trip_params 
       params.require(:trip).permit(:name, :duration)
      
     end
 
     def set_trip
-
       @trip = @user.trips.find(params[:id])
     end
 
+
     def set_user 
-      @user = user.find(params[:user_id])
+      @user = User.find(params[:user_id])
     end
+
+
+
 end
