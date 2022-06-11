@@ -1,11 +1,9 @@
-
-import User from "./components/users/User";
-
+import Users from "./components/users/Users";
 
 const App = () => (
   <>
   <h1>App</h1>
-    <User/>
+    <Users/>
   </>
 )
 
