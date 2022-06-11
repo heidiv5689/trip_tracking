@@ -2,7 +2,7 @@ import Trip from './Trip';
 
 const TripList = ({ trips, updateTrip, deleteTrip }) => (
   <>
-    <h3>All Topics</h3>
+    <h3>All Trips</h3>
     { trips.map( t => 
       <Trip
         key={t.id} 

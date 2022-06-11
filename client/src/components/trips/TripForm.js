@@ -24,14 +24,14 @@ const TripForm = ({ addTrip, id, name, duration, updateTrip, setEdit }) => {
     <>
       <h1>{ id ? 'Edit' : 'Create '} trip</h1>
       <form onSubmit={handleSubmit}>
-        <label>name:</label>
+        <label>Trip:</label>
         <input
           name='name'
           value={trip.name}
           onChange={(e) => setTrip({...trip, name: e.target.value })} 
 
           required
-          placeholder='name'
+          placeholder='Trip Name'
         />
         <label>Description</label>
         <textarea

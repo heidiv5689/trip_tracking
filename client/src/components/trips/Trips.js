@@ -50,7 +50,7 @@ const Trips = ({ userId, userEmail }) => {
 
   return (
     <>
-      <h1>{userEmail}'s trips</h1>
+      <h1>{userEmail}'s Trips</h1>
       <TripForm addTrip={addTrip} />
       <TripList
         trips={trips}
