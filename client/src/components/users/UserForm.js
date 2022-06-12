@@ -51,7 +51,7 @@ const UserForm = ({ addUser, id, setEdit, updateUser, email, password }) => {
          
           placeholder='password'
         />
-        <button type='submit'>Submit</button>
+        <button className="btn btn-secondary" type='submit'>Submit</button>
       </form>
     </>
   )

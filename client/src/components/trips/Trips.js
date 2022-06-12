@@ -2,9 +2,16 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import TripForm from './TripForm';
 import TripList from './TripList';
+import { useParams, useLocation } from 'react-router-dom';
 
-const Trips = ({ userId, userEmail }) => {
+// const Trips = ({ userId, userEmail }) => {
+  const Trips = ({ }) => {
   const [trips, setTrips] = useState([])
+
+  const params = useParams()
+  const location = useLocation()
+  const { userId, userEmail } = location.state
+
 
   useEffect( () => {
     // grab all trips from backend

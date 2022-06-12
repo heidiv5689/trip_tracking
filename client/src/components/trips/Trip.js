@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import TripForm from './TripForm';
+import { Link } from 'react-router-dom';
 
 const Trip = ({ id, name, duration, updateTrip, deleteTrip }) => {
   const [editing, setEdit] = useState(false)

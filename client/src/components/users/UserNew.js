@@ -31,7 +31,7 @@ const UserNew = ({ addUser }) => {
           required
         />
        
-        <button type='submit'>Add</button>
+        <button className="btn btn-secondary" type='submit'>Add</button>
       </form>
     </>
   )
